@@ -1,0 +1,4846 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Picker</class>
+ <widget class="QMainWindow" name="Picker">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>750</width>
+    <height>675</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>750</width>
+    <height>675</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Picker</string>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="main_layout">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0">
+    <property name="leftMargin">
+     <number>5</number>
+    </property>
+    <property name="topMargin">
+     <number>5</number>
+    </property>
+    <property name="rightMargin">
+     <number>5</number>
+    </property>
+    <property name="bottomMargin">
+     <number>5</number>
+    </property>
+    <property name="spacing">
+     <number>5</number>
+    </property>
+    <item row="2" column="0">
+     <layout class="QHBoxLayout" name="mainHorizontal_layout">
+      <property name="spacing">
+       <number>5</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QVBoxLayout" name="left_layout" stretch="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+        <property name="spacing">
+         <number>5</number>
+        </property>
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+        <property name="leftMargin">
+         <number>5</number>
+        </property>
+        <property name="topMargin">
+         <number>5</number>
+        </property>
+        <property name="rightMargin">
+         <number>5</number>
+        </property>
+        <property name="bottomMargin">
+         <number>5</number>
+        </property>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="pose_label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>125</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Pose</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="bindPose_pushButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>125</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Bind Pose</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="flipPose_pushButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>125</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Flip</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="mirrorPose_pushButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>125</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Mirror</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="visibilities_label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>125</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Visibilities</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="visControls_pushButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>125</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Controls</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="visGeometries_pushButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>125</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Geometries</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="select_label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>125</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Select</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="selectAll_pushButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>125</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>All</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="selectBody_pushButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>125</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Body</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="selectFace_pushButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>125</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Face</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="key_label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>125</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Key</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="keyAll_pushButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>125</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>All</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="keyBody_pushButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>125</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Body</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="keyFace_pushButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>125</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Face</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTabWidget" name="picker_tab">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="tabPosition">
+         <enum>QTabWidget::North</enum>
+        </property>
+        <property name="tabShape">
+         <enum>QTabWidget::Rounded</enum>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <property name="elideMode">
+         <enum>Qt::ElideNone</enum>
+        </property>
+        <property name="usesScrollButtons">
+         <bool>true</bool>
+        </property>
+        <property name="movable">
+         <bool>false</bool>
+        </property>
+        <widget class="QWidget" name="body_tab">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <attribute name="title">
+          <string>Body</string>
+         </attribute>
+         <widget class="QLabel" name="body_label">
+          <property name="geometry">
+           <rect>
+            <x>27</x>
+            <y>0</y>
+            <width>600</width>
+            <height>600</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap>images/body.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="foot_l_groupBox">
+          <property name="geometry">
+           <rect>
+            <x>467</x>
+            <y>400</y>
+            <width>131</width>
+            <height>111</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Foot</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <widget class="QPushButton" name="footLegFingerA0_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>17</x>
+             <y>20</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerA1_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>17</x>
+             <y>40</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerA2_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>17</x>
+             <y>60</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerB0_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>37</x>
+             <y>20</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerB1_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>37</x>
+             <y>40</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerB2_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>37</x>
+             <y>60</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerB3_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>37</x>
+             <y>80</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerC0_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>57</x>
+             <y>20</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerC1_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>57</x>
+             <y>40</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerC3_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>57</x>
+             <y>80</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerC2_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>57</x>
+             <y>60</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerD0_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>77</x>
+             <y>20</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerE2_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>97</x>
+             <y>60</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerE3_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>97</x>
+             <y>80</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerE0_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>97</x>
+             <y>20</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerD1_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>77</x>
+             <y>40</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerE1_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>97</x>
+             <y>40</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerD3_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>77</x>
+             <y>80</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerD2_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>77</x>
+             <y>60</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="root_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>267</x>
+            <y>297</y>
+            <width>120</width>
+            <height>15</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+color: black;</string>
+          </property>
+          <property name="text">
+           <string>Root</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="head_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>312</x>
+            <y>110</y>
+            <width>31</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+color: black;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="footLegFk_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>287</x>
+            <y>480</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>FK</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="footLegFk_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>350</x>
+            <y>480</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: blue;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>FK</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="footLegIk_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>377</x>
+            <y>480</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: blue;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>IK</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="footLegIk_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>257</x>
+            <y>480</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>IK</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="lowLegFk_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>287</x>
+            <y>400</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>FK</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="lowLegFk_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>350</x>
+            <y>400</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: blue;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>FK</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upLegFk_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>287</x>
+            <y>316</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>FK</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upLegFk_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>350</x>
+            <y>316</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: blue;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>FK</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="legPoleVector_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>257</x>
+            <y>400</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>IK</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="legPoleVector_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>377</x>
+            <y>400</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: blue;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>IK</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upLegShaper_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>227</x>
+            <y>353</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="lowLegShaper_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>227</x>
+            <y>441</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="lowLegShaper_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>407</x>
+            <y>441</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upLegShaper_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>407</x>
+            <y>353</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="midLegMainShaper_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>202</x>
+            <y>400</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="midLegMainShaper_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>431</x>
+            <y>400</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="midLegShaper_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>407</x>
+            <y>400</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="midLegShaper_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>227</x>
+            <y>400</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="center_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>227</x>
+            <y>546</y>
+            <width>200</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+color: black;</string>
+          </property>
+          <property name="text">
+           <string>Center</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="general_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>202</x>
+            <y>572</y>
+            <width>250</width>
+            <height>25</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+color: black;</string>
+          </property>
+          <property name="text">
+           <string>General</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="spineTop_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>252</x>
+            <y>200</y>
+            <width>150</width>
+            <height>15</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+color: black;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="spineMiddle_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>302</x>
+            <y>240</y>
+            <width>50</width>
+            <height>15</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+color: black;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="spineFkInv01_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>357</x>
+            <y>220</y>
+            <width>25</width>
+            <height>15</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: orange;
+color: black;</string>
+          </property>
+          <property name="text">
+           <string>INV</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="spineFkInv02_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>357</x>
+            <y>240</y>
+            <width>25</width>
+            <height>15</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: orange;
+color: black;</string>
+          </property>
+          <property name="text">
+           <string>INV</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="spineFkInv03_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>357</x>
+            <y>260</y>
+            <width>25</width>
+            <height>15</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: orange;
+color: black;</string>
+          </property>
+          <property name="text">
+           <string>INV</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="spineFk03_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>275</x>
+            <y>220</y>
+            <width>25</width>
+            <height>15</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+color: black;</string>
+          </property>
+          <property name="text">
+           <string>Fk</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="spineFk01_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>275</x>
+            <y>260</y>
+            <width>25</width>
+            <height>15</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+color: black;</string>
+          </property>
+          <property name="text">
+           <string>Fk</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="spineFk02_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>275</x>
+            <y>240</y>
+            <width>25</width>
+            <height>15</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+color: black;</string>
+          </property>
+          <property name="text">
+           <string>Fk</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="spineBottom_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>252</x>
+            <y>279</y>
+            <width>150</width>
+            <height>15</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+color: black;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="neck_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>311</x>
+            <y>145</y>
+            <width>31</width>
+            <height>15</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+color: black;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="clavicleArm_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>342</x>
+            <y>170</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: blue;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="clavicleArm_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>291</x>
+            <y>170</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="leg_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>377</x>
+            <y>316</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: blue;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="leg_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>257</x>
+            <y>316</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="footLegMiddle_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>287</x>
+            <y>510</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="footLegMiddle_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>350</x>
+            <y>510</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: blue;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="midArmMainShaper_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>467</x>
+            <y>100</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upArmFk_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>407</x>
+            <y>175</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: blue;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>FK</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="handArmIk_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>527</x>
+            <y>150</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: blue;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>IK</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="arm_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>407</x>
+            <y>150</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: blue;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="midArmShaper_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>467</x>
+            <y>125</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="lowArmFk_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>467</x>
+            <y>175</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: blue;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>FK</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="lowArmShaper_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>498</x>
+            <y>125</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upArmShaper_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>437</x>
+            <y>125</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="armPoleVector_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>467</x>
+            <y>150</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: blue;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>IK</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="handArmFk_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>527</x>
+            <y>175</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: blue;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>FK</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="midArmMainShaper_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>167</x>
+            <y>100</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="arm_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>227</x>
+            <y>150</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="lowArmFk_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>167</x>
+            <y>175</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>FK</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="handArmFk_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>107</x>
+            <y>175</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>FK</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="armPoleVector_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>167</x>
+            <y>150</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>IK</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="lowArmShaper_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>137</x>
+            <y>125</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="midArmShaper_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>167</x>
+            <y>125</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upArmShaper_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>198</x>
+            <y>125</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upArmFk_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>227</x>
+            <y>175</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>FK</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="handArmIk_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>107</x>
+            <y>150</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>IK</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="armSettings_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>107</x>
+            <y>125</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="armSettings_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>527</x>
+            <y>125</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: blue;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="legSettings_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>227</x>
+            <y>480</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:red;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="legSettings_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>407</x>
+            <y>480</y>
+            <width>20</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: blue;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="foot_r_groupBox">
+          <property name="geometry">
+           <rect>
+            <x>57</x>
+            <y>400</y>
+            <width>131</width>
+            <height>111</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Foot</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <widget class="QPushButton" name="footLegFingerE0_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>17</x>
+             <y>20</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerE1_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>17</x>
+             <y>40</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerE2_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>17</x>
+             <y>60</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerD0_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>37</x>
+             <y>20</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerD1_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>37</x>
+             <y>40</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerD2_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>37</x>
+             <y>60</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerD3_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>37</x>
+             <y>80</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerC0_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>57</x>
+             <y>20</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerC1_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>57</x>
+             <y>40</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerC3_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>57</x>
+             <y>80</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerC2_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>57</x>
+             <y>60</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerB0_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>77</x>
+             <y>20</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerA2_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>97</x>
+             <y>60</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerE3_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>17</x>
+             <y>80</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerA0_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>97</x>
+             <y>20</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerB1_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>77</x>
+             <y>40</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerA1_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>97</x>
+             <y>40</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerB3_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>77</x>
+             <y>80</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="footLegFingerB2_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>77</x>
+             <y>60</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="hand_l_groupBox">
+          <property name="geometry">
+           <rect>
+            <x>467</x>
+            <y>260</y>
+            <width>131</width>
+            <height>111</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>hand</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <widget class="QPushButton" name="handArmFingerA0_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>17</x>
+             <y>20</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerA1_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>17</x>
+             <y>40</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerA2_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>17</x>
+             <y>60</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerB0_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>37</x>
+             <y>20</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerB1_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>37</x>
+             <y>40</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerB2_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>37</x>
+             <y>60</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerB3_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>37</x>
+             <y>80</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerC0_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>57</x>
+             <y>20</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerC1_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>57</x>
+             <y>40</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerC3_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>57</x>
+             <y>80</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerC2_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>57</x>
+             <y>60</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerD0_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>77</x>
+             <y>20</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerE2_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>97</x>
+             <y>60</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerE3_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>97</x>
+             <y>80</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerE0_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>97</x>
+             <y>20</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerD1_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>77</x>
+             <y>40</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerE1_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>97</x>
+             <y>40</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerD3_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>77</x>
+             <y>80</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerD2_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>77</x>
+             <y>60</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="hand_r_groupBox">
+          <property name="geometry">
+           <rect>
+            <x>57</x>
+            <y>260</y>
+            <width>131</width>
+            <height>111</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Hand</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <widget class="QPushButton" name="handArmFingerE0_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>17</x>
+             <y>20</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerE1_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>17</x>
+             <y>40</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerE2_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>17</x>
+             <y>60</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerD0_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>37</x>
+             <y>20</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerD1_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>37</x>
+             <y>40</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerD2_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>37</x>
+             <y>60</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerD3_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>37</x>
+             <y>80</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerC0_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>57</x>
+             <y>20</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerC1_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>57</x>
+             <y>40</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerC3_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>57</x>
+             <y>80</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerC2_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>57</x>
+             <y>60</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerB0_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>77</x>
+             <y>20</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerA2_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>97</x>
+             <y>60</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerE3_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>17</x>
+             <y>80</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerA0_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>97</x>
+             <y>20</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerB1_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>77</x>
+             <y>40</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerA1_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>97</x>
+             <y>40</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerB3_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>77</x>
+             <y>80</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="handArmFingerB2_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>77</x>
+             <y>60</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+color: white;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="legSnap_r_pushButton">
+          <property name="geometry">
+           <rect>
+            <x>226</x>
+            <y>510</y>
+            <width>51</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>Snap</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="legSnap_l_pushButton">
+          <property name="geometry">
+           <rect>
+            <x>377</x>
+            <y>510</y>
+            <width>51</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: blue;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>Snap</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="armSnap_l_pushButton">
+          <property name="geometry">
+           <rect>
+            <x>557</x>
+            <y>175</y>
+            <width>51</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: blue;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>Snap</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="armSnap_r_pushButton">
+          <property name="geometry">
+           <rect>
+            <x>47</x>
+            <y>175</y>
+            <width>51</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>Snap</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="face_tab">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <attribute name="title">
+          <string>Face</string>
+         </attribute>
+         <widget class="QLabel" name="face_label">
+          <property name="geometry">
+           <rect>
+            <x>-50</x>
+            <y>-100</y>
+            <width>750</width>
+            <height>750</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap>images/face.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="teethAndTongue_groupBox">
+          <property name="geometry">
+           <rect>
+            <x>500</x>
+            <y>440</y>
+            <width>131</width>
+            <height>161</height>
+           </rect>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::DefaultContextMenu</enum>
+          </property>
+          <property name="title">
+           <string>Teeth and tongue</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+          <widget class="QPushButton" name="upTeeth_c_ctr">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>20</y>
+             <width>81</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: yellow;
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="dwTeeth_c_ctr">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>130</y>
+             <width>81</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: yellow;
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="tongue01_c_ctr">
+           <property name="geometry">
+            <rect>
+             <x>65</x>
+             <y>51</y>
+             <width>10</width>
+             <height>10</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: yellow;
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="tongue02_c_ctr">
+           <property name="geometry">
+            <rect>
+             <x>65</x>
+             <y>64</y>
+             <width>10</width>
+             <height>10</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: yellow;
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="tongue03_c_ctr">
+           <property name="geometry">
+            <rect>
+             <x>65</x>
+             <y>77</y>
+             <width>10</width>
+             <height>10</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: yellow;
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="tongue04_c_ctr">
+           <property name="geometry">
+            <rect>
+             <x>65</x>
+             <y>90</y>
+             <width>10</width>
+             <height>10</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: yellow;
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="tongueMain_c_ctr">
+           <property name="geometry">
+            <rect>
+             <x>58</x>
+             <y>39</y>
+             <width>25</width>
+             <height>10</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: yellow;
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="tongue05_c_ctr">
+           <property name="geometry">
+            <rect>
+             <x>65</x>
+             <y>103</y>
+             <width>10</width>
+             <height>10</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: yellow;
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="tongue06_c_ctr">
+           <property name="geometry">
+            <rect>
+             <x>65</x>
+             <y>116</y>
+             <width>10</width>
+             <height>10</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: yellow;
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="nose_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>320</x>
+            <y>290</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="eyes_groupBox">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>440</y>
+            <width>131</width>
+            <height>161</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Eyes</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <widget class="QPushButton" name="lookAt_c_ctr">
+           <property name="geometry">
+            <rect>
+             <x>24</x>
+             <y>90</y>
+             <width>81</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: yellow;
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="lookAt_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>34</x>
+             <y>130</y>
+             <width>20</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="lookAt_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>74</x>
+             <y>130</y>
+             <width>20</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="eye_r_ctr">
+           <property name="geometry">
+            <rect>
+             <x>34</x>
+             <y>30</y>
+             <width>20</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="eye_l_ctr">
+           <property name="geometry">
+            <rect>
+             <x>74</x>
+             <y>30</y>
+             <width>20</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="septum_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>317</x>
+            <y>246</y>
+            <width>15</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="brow_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>317</x>
+            <y>171</y>
+            <width>15</width>
+            <height>15</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="headSquashSup_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>312</x>
+            <y>50</y>
+            <width>25</width>
+            <height>25</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="noseSquash_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>320</x>
+            <y>310</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="nose_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>350</x>
+            <y>290</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: Blue;
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upLip02_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>380</x>
+            <y>361</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="puffUp_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>320</x>
+            <y>330</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="dwLipMain_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>275</x>
+            <y>430</y>
+            <width>100</width>
+            <height>15</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upLipMain_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>275</x>
+            <y>343</y>
+            <width>100</width>
+            <height>15</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="dwLip_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>320</x>
+            <y>416</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="dwLip01_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>350</x>
+            <y>416</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upLip_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>320</x>
+            <y>361</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upLip01_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>350</x>
+            <y>361</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="dwLip02_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>380</x>
+            <y>416</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="puffDw_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>320</x>
+            <y>467</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="jaw_c_Ctr">
+          <property name="geometry">
+           <rect>
+            <x>226</x>
+            <y>500</y>
+            <width>200</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="cheek_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>490</x>
+            <y>350</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: Blue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="ear_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>540</x>
+            <y>250</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: Blue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="browMain_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>370</x>
+            <y>170</y>
+            <width>150</width>
+            <height>15</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: Blue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="brow01_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>373</x>
+            <y>190</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="brow01Mid_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>385</x>
+            <y>150</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="browMid_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>411</x>
+            <y>150</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="brow02_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>470</x>
+            <y>190</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="brow03_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>506</x>
+            <y>190</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="dwEyelid02_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>430</x>
+            <y>258</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="dwEyelid03_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>460</x>
+            <y>258</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="dwEyelid01_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>400</x>
+            <y>258</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upEyelid01_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>400</x>
+            <y>242</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upEyelid02_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>430</x>
+            <y>242</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upEyelid03_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>460</x>
+            <y>242</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="dwEyelidMain_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>410</x>
+            <y>269</y>
+            <width>50</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: Blue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upEyelidMain_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>410</x>
+            <y>231</y>
+            <width>50</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: Blue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="extEyelid_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>476</x>
+            <y>248</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="intEyelid_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>386</x>
+            <y>248</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="nose_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>295</x>
+            <y>290</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: Red;
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="corner_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>400</x>
+            <y>390</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="cornerMain_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>416</x>
+            <y>388</y>
+            <width>15</width>
+            <height>15</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: Blue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="intEyelidMain_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>370</x>
+            <y>243</y>
+            <width>10</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: Blue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="extEyelidMain_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>490</x>
+            <y>243</y>
+            <width>10</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: Blue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="nasoLabial_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>410</x>
+            <y>347</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: Blue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="mouthMain_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>313</x>
+            <y>381</y>
+            <width>25</width>
+            <height>25</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="headSquashInf_c_ctr">
+          <property name="geometry">
+           <rect>
+            <x>312</x>
+            <y>544</y>
+            <width>25</width>
+            <height>25</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: yellow;
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="browMid_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>226</x>
+            <y>150</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="brow03_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>133</x>
+            <y>190</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="brow01_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>267</x>
+            <y>190</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="browMain_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>130</x>
+            <y>170</y>
+            <width>150</width>
+            <height>15</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="brow01Mid_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>253</x>
+            <y>150</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="brow02_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>170</x>
+            <y>190</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upEyelidMain_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>190</x>
+            <y>231</y>
+            <width>50</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upEyelid01_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>240</x>
+            <y>242</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="dwEyelid01_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>240</x>
+            <y>258</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="extEyelidMain_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>243</y>
+            <width>10</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="intEyelidMain_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>270</x>
+            <y>243</y>
+            <width>10</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="extEyelid_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>166</x>
+            <y>248</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upEyelid03_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>242</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upEyelid02_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>210</x>
+            <y>242</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="dwEyelid02_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>210</x>
+            <y>258</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="intEyelid_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>256</x>
+            <y>248</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="dwEyelid03_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>258</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="dwEyelidMain_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>190</x>
+            <y>269</y>
+            <width>50</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="nasoLabial_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>227</x>
+            <y>348</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="cheek_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>153</x>
+            <y>350</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="ear_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>95</x>
+            <y>250</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="cornerMain_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>220</x>
+            <y>388</y>
+            <width>15</width>
+            <height>15</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upLip01_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>262</x>
+            <y>361</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="dwLip01_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>262</x>
+            <y>416</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::DefaultContextMenu</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="dwLip02_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>291</x>
+            <y>416</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upLip02_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>291</x>
+            <y>361</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="corner_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>242</x>
+            <y>390</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="dwEyeline03_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>282</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="dwEyeline03_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>460</x>
+            <y>282</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="dwEyeline02_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>210</x>
+            <y>282</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="dwEyelineMain_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>199</x>
+            <y>293</y>
+            <width>30</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="dwEyeline01_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>240</x>
+            <y>282</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="dwEyeline02_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>430</x>
+            <y>282</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="dwEyeline01_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>400</x>
+            <y>282</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="dwEyelineMain_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>419</x>
+            <y>293</y>
+            <width>30</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: Blue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upEyeline03_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>460</x>
+            <y>218</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upEyeline03_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>218</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upEyeline02_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>210</x>
+            <y>218</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upEyeline01_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>400</x>
+            <y>218</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upEyelineMain_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>199</x>
+            <y>207</y>
+            <width>30</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upEyeline02_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>430</x>
+            <y>218</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upEyeline01_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>240</x>
+            <y>218</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="upEyelineMain_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>419</x>
+            <y>207</y>
+            <width>30</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: Blue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="cheekUp03_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>310</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="cheekUp01_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>400</x>
+            <y>310</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="cheekUp02_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>430</x>
+            <y>310</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="cheekUpMain_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>419</x>
+            <y>321</y>
+            <width>30</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: Blue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="cheekUp01_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>240</x>
+            <y>310</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="cheekUp03_l_ctr">
+          <property name="geometry">
+           <rect>
+            <x>460</x>
+            <y>310</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightblue;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="cheekUpMain_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>199</x>
+            <y>321</y>
+            <width>30</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: red;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="cheekUp02_r_ctr">
+          <property name="geometry">
+           <rect>
+            <x>210</x>
+            <y>310</y>
+            <width>10</width>
+            <height>10</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: lightpink;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="namespace_layout" stretch="1,0,0">
+      <property name="spacing">
+       <number>5</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>400</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="namespace_pushButton">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Set namespace</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="namespace_lineEdit">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>20</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
