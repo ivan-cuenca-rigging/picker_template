@@ -7,14 +7,17 @@ from PySide2 import QtCore, QtWidgets, QtUiTools, QtGui
 from functools import partial
 
 
+char_name = 'Hulk'
+
+
 class Picker(QtWidgets.QWidget):
     def __init__(self, scale_factor):
         maya_main_window_ptr = OpenMayaUI.MQtUtil.mainWindow()
         maya_main_window = wrapInstance(int(maya_main_window_ptr), QtWidgets.QWidget)
         super(Picker, self).__init__(maya_main_window)
 
-        self.setWindowTitle('Picker')
-        self.setObjectName('PickerWindow')
+        self.setWindowTitle('{} Picker'.format(char_name))
+        self.setObjectName('{}PickerWindow'.format(char_name))
         self.ui_path_value = r'{}\picker.ui'.format(os.path.dirname(__file__))
 
         self.width_default = 750
@@ -24,7 +27,7 @@ class Picker(QtWidgets.QWidget):
 
         # Load the UI from path
         self.ui_widget = self.loadUiWidget(self.ui_path_value, maya_main_window)
-
+        self.load_icon()
         self.load_images()
 
         # Drag and drop functionality
@@ -480,6 +483,11 @@ class Picker(QtWidgets.QWidget):
             if label:
                 pixmap = QtGui.QPixmap(os.path.join(images_folder, image_file))
                 label.setPixmap(pixmap)
+
+    def load_icon(self):
+        icon_path = r'{}/images/hiddenStrings.png'.format(os.path.dirname(__file__))
+        icon = QtGui.QIcon(icon_path)
+        QtWidgets.QApplication.setWindowIcon(icon)
     
     # DRAG AND DROP METHODS
     def mousePressEvent(self, event):
@@ -552,7 +560,7 @@ def openWindow(scale_factor):
     all_maya_windows = maya_main_window.findChildren(QtWidgets.QWidget)
 
     picker_window = [x for x in all_maya_windows if
-                     isinstance(x, QtWidgets.QWidget) and x.objectName() == 'PickerWindow']
+                     isinstance(x, QtWidgets.QWidget) and x.objectName() == '{}PickerWindow'.format(char_name)]
     if picker_window:
         picker_window[0].close()
 
