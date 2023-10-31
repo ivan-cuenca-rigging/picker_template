@@ -3523,7 +3523,7 @@ color: white;</string>
            <string/>
           </property>
          </widget>
-         <widget class="QPushButton" name="jaw_c_Ctr">
+         <widget class="QPushButton" name="jaw_c_ctr">
           <property name="geometry">
            <rect>
             <x>226</x>

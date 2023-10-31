@@ -15,7 +15,7 @@ class Picker(QtWidgets.QWidget):
 
         self.setWindowTitle('Picker')
         self.setObjectName('PickerWindow')
-        self.ui_path_value = r'{}\picker_view.ui'.format(os.path.dirname(__file__))
+        self.ui_path_value = r'{}\picker.ui'.format(os.path.dirname(__file__))
 
         self.width_default = 750
         self.height_default = 675
